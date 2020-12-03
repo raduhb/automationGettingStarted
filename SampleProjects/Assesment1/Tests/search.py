@@ -16,7 +16,8 @@ class SearchTest(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.driver = webdriver.Chrome(executable_path="/Users/radu.haidet/PycharmProjects/pythonProject/drivers/chromedriver")
+        cls.driver = webdriver.Chrome(executable_path="/Users/radu.haidet/PycharmProjects/pythonProject/drivers"
+                                                      "/chromedriver")
         cls.driver.implicitly_wait(10)
         cls.driver.maximize_window()
 
