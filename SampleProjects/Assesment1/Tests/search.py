@@ -4,9 +4,8 @@ import unittest
 import sys
 import os
 
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-
+from SampleProjects.Assesment1.Pages.firstResultPage import FirstResultPage
+from SampleProjects.Assesment1.Pages.resultsPage import ResultsPage
 from SampleProjects.Assesment1.Pages.searchPage import SearchPage
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "...", "..."))
@@ -27,10 +26,15 @@ class SearchTest(unittest.TestCase):
         driver.get("https://google.com")
 
         search = SearchPage(driver)
-        # time.sleep(3)
-        # WebDriverWait(driver, 50).until(EC.alert_is_present).accept()
         search.click_agree_cookies()
-        search.enter_search_term('python')
+        search.enter_search_term('selenium python')
+
+        check = ResultsPage(driver)
+        check.check_first_result()
+        check.click_first_result()
+
+        result = FirstResultPage(driver)
+        result.check_first_result_url()
 
         time.sleep(2)
 
