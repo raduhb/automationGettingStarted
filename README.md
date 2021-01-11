@@ -8,7 +8,7 @@ Each project uses a different testing website.
 
 ##### Install requirements
 
-cd -
+cd -  
 pip install -r requirements.txt
 
 
