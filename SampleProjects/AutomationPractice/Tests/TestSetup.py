@@ -5,6 +5,7 @@ import os
 
 sys.path.append(os.path.join(os.path.dirname(__file__), "...", "..."))
 
+
 class TestSetup(unittest.TestCase):
 
     @classmethod
