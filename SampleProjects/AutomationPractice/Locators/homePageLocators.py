@@ -6,3 +6,4 @@ class HomePageLocators():
     cart_dropdown_class = "shopping_cart"
     cart_dropdown_content_class = "cart_block"
     check_out_button_id = "button_order_cart"
+    cart_button_xpath_href = "//a[@href = 'http://automationpractice.com/index.php?controller=order']"

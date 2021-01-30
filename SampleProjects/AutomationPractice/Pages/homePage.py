@@ -15,6 +15,7 @@ class HomePage(SelectionActions):
         self.cart_dropdown_class = HomePageLocators.cart_dropdown_class
         self.check_out_button_id = HomePageLocators.check_out_button_id
         self.cart_dropdown_content_class = HomePageLocators.cart_dropdown_content_class
+        self.cart_button_xpath_href = HomePageLocators.cart_button_xpath_href
 
     def enter_search_term_and_click_search_button(self, search_term):
         SelectionActions.find_and_clear(self, By.ID, self.search_textbox_id)
@@ -30,11 +31,7 @@ class HomePage(SelectionActions):
         SelectionActions.find_and_click(self, By.CLASS_NAME, self.sign_in_button_class)
 
     def hover_cart_dropdown_and_click_check_out_button(self):
-        # SelectionActions.find_and_click(self, By.CSS_SELECTOR, 'http://automationpractice.com/index.php?controller=cart&amp;add=1&amp;id_product=3&amp;token=e817bb0705dd58da8db074c69f729fd8')
-        # SelectionActions.find_and_click(self, By.CLASS_NAME, 'ajax_add_to_cart_button')
-        # SelectionActions.find_and_click(self, By.CLASS_NAME, 'cross')
         SelectionActions.find_and_hover(self, By.CLASS_NAME, self.cart_dropdown_class)
-        # SelectionActions.find_and_click(self, By.NAME, self.check_out_button_id)
 
     def check_cart_dropdown_is_visible(self):
         element = self.driver.find_element_by_class_name(self.cart_dropdown_content_class)
@@ -42,3 +39,6 @@ class HomePage(SelectionActions):
             print("Element found")
         else:
             print("Element not found")
+
+    def click_shopping_cart_button(self):
+        SelectionActions.find_and_click(self, By.XPATH, self.cart_button_xpath_href)
