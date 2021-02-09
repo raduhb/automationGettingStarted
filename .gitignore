@@ -1,3 +1,10 @@
 .DS_Store
 .pytest_cache/
 venv/
+
+.idea
+pic (compiled files python)
+git remove cached path to file
+
+git rm --cached /path/to/file
+git rm -r --cached .

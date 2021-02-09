@@ -1,13 +1,12 @@
-from SampleProjects.AutomationPractice.Actions.selectionActions import SelectionActions
-from SampleProjects.AutomationPractice.Locators.checkoutPageLocators import CheckoutPageLocators
+from SampleProjects.AutomationPractice.utils.SeleniumActions import SeleniumActions
 
 
-class CheckoutPage(SelectionActions):
+class CheckoutPage(SeleniumActions):
 
     def __init__(self, driver):
         self.driver = driver
 
-        self.checkout_page_url = CheckoutPageLocators.checkout_page_url
+        self.checkout_page_url = "http://automationpractice.com/index.php?controller=order"
 
     def check_checkout_page_url(self):
         browser_url = self.driver.current_url
