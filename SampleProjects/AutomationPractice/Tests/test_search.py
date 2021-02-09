@@ -13,7 +13,6 @@ class TestSearchHomePage(BaseSetup):
 
     # Test user is able to perform a search by clicking the search button
     def test_perform_search_by_clicking_search_button(self):
-        import ipdb; ipdb.set_trace()
         home = HomePage(self.driver, self.page_url)
         home.enter_search_term_and_click_search_button('test')
 
