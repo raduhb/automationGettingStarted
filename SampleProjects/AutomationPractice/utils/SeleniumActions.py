@@ -10,7 +10,7 @@ from selenium.webdriver.common.keys import Keys
 TIMEOUT = 2
 
 
-class SeleniumActions(BaseSetup):
+class SeleniumActions(object):
 
     def get_element(self, locator):
         element = WebDriverWait(self.driver, TIMEOUT).until(

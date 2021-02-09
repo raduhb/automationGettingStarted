@@ -12,7 +12,6 @@ class BaseSetup(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome(
             executable_path=sys.path[0]+"/drivers/chromedriver")
-        self.driver = webdriver.Chrome()
         self.driver.maximize_window()
 
     def tearDown(self):

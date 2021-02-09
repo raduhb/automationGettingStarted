@@ -4,6 +4,8 @@ from Pages.homePage import HomePage
 from Pages.signInPage import SignInPage
 from Pages.checkoutPage import CheckoutPage
 from utils.BaseSetup import BaseSetup
+import unittest
+
 
 # os.environ["PYTHONPATH"].split(os.pathsep)
 
