@@ -1,6 +1,6 @@
 import traceback
 
-from SampleProjects.AutomationPractice.utils.BaseSetup import BaseSetup
+from utils.BaseSetup import BaseSetup
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
@@ -11,10 +11,6 @@ TIMEOUT = 2
 
 
 class SeleniumActions(BaseSetup):
-
-    def get_url(self, url):
-        page = self.driver.get(url)
-        return page
 
     def get_element(self, locator):
         element = WebDriverWait(self.driver, TIMEOUT).until(

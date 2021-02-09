@@ -3,13 +3,11 @@ import unittest
 import sys
 import os
 
-sys.path.append(os.path.join(os.path.dirname(__file__), "...", "..."))
-
 
 class BaseSetup(unittest.TestCase):
 
     def setUp(self):
-        self.driver = webdriver.Chrome(executable_path=sys.path[1]+"/drivers/chromedriver")
+        self.driver = webdriver.Chrome()
         self.driver.maximize_window()
 
     def tearDown(self):

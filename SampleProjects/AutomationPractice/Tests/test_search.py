@@ -1,23 +1,20 @@
 import time
-import unittest
-# sys.path.append(os.path.join(os.path.dirname(__file__), "...", "..."))
-# import export
 
-# export PYTHONPATH="${PYTHONPATH}:~/.PycharmProjects/pythonProject/SampleProjects/AutomationPractice/"
-# sys.path.append("~/.PycharmProjects/pythonProject/SampleProjects/AutomationPractice/")
-from SampleProjects.AutomationPractice.Pages.homePage import HomePage
-from SampleProjects.AutomationPractice.Pages.signInPage import SignInPage
-from SampleProjects.AutomationPractice.Pages.checkoutPage import CheckoutPage
-from SampleProjects.AutomationPractice.utils.BaseSetup import BaseSetup
+from Pages.homePage import HomePage
+from Pages.signInPage import SignInPage
+from Pages.checkoutPage import CheckoutPage
+from utils.BaseSetup import BaseSetup
 
 # os.environ["PYTHONPATH"].split(os.pathsep)
 
-class SearchTest(HomePage):
+class TestSearchHomePage(BaseSetup):
+
+    page_url = "http://automationpractice.com"
 
     # Test user is able to perform a search by clicking the search button
     def test_perform_search_by_clicking_search_button(self):
-        self.get_url("http://automationpractice.com")
-        home = HomePage(self.driver)
+        import ipdb; ipdb.set_trace()
+        home = HomePage(self.driver, self.page_url)
         home.enter_search_term_and_click_search_button('test')
 
         time.sleep(5)
@@ -73,7 +70,3 @@ class SearchTest(HomePage):
     #     checkout.check_checkout_page_url()
     #
     #     time.sleep(5)
-
-
-if __name__ == '__main__':
-    unittest.main()

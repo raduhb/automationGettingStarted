@@ -1,4 +1,4 @@
-from SampleProjects.AutomationPractice.utils.SeleniumActions import SeleniumActions
+from utils.SeleniumActions import SeleniumActions
 
 
 class CheckoutPage(SeleniumActions):
